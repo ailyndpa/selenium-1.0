@@ -2,10 +2,9 @@ package Pruebas;
 
 import java.io.File;
 import java.io.IOException;
-import java.sql.Time;
+import java.lang.reflect.Method;
 import java.time.Duration;
 import java.util.List;
-import java.util.Timer;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -22,18 +21,35 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import org.testng.internal.annotations.ITest;
-import org.testng.util.TimeUtils;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class AppTest 
 {
 	WebDriver driver;
-			
+	static ExtentTest test;
+	static ExtentReports extent;
+	static ExtentSparkReporter spark;
+	
+	@BeforeTest
+	public void startReport() {
+		extent = new ExtentReports();
+		spark = new ExtentSparkReporter("ExtentReport.html");
+		spark.config().setDocumentTitle("Automation Report");
+		spark.config().setReportName("Test Report");
+		spark.config().setTimeStampFormat("dd.MM.yyyy HH:mm:ss");
+		spark.config().setTheme(Theme.DARK);
+		extent.attachReporter(spark);
+	}
 	@BeforeMethod
-	public void setup(){
-		
+	public void setup(Method method){
+		test = extent.createTest(method.getName());
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions option1 = new ChromeOptions();
 		option1.addArguments("--headless");
@@ -59,8 +75,8 @@ public class AppTest
     @Test
     public void clickCuba()
     {
-    	driver.findElement(By.id("incorrecto")).click();
-    	
+    	Assert.assertTrue(driver.findElement(By.name("Cosa")).isDisplayed());
+    	    	
     }
     
     @Test
@@ -79,18 +95,21 @@ public class AppTest
     
     @AfterMethod
     public void After(ITestResult result) throws IOException {
-    	if (result.isSuccess()) {
-    		System.out.println("SUCCESS");
+    	if (result.getStatus() == ITestResult.FAILURE){
+    		File evidencia=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        	FileUtils.copyFile(evidencia, new File("target/surefire-reports/Evidencia"));
+    		test.log(Status.FAIL, result.getThrowable());
+        	test.addScreenCaptureFromPath("target/surefire-reports/Evidencia");
+        	
+    	} else if(result.getStatus() == ITestResult.SUCCESS) {
+    		test.log(Status.PASS, result.getTestName());
+    	} else {
+    		test.log(Status.SKIP, result.getTestName());
     	}
-    	/*if (ITestResult.SUCCESS) {
-    		System.out.println("SUCCESS");
-    	}*/
-    	
-    	System.out.println("result> "+result);
-    	//System.out.println("result> "+result.sta() == "SUCCESS");
-    	
-    	File evidencia=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-    	FileUtils.copyFile(evidencia, new File("target/surefire-reports/Evidencia_"+ System.currentTimeMillis() +".jpeg"));
-    	
+   }
+    
+    @AfterTest
+    public void tearDrown() {
+    	extent.flush();
     }
 }

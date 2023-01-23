@@ -2,38 +2,49 @@
 <testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-19T21:16:48Z" name="Default suite" finished-at="2023-01-19T21:17:18Z" duration-ms="30433">
+  <suite started-at="2023-01-23T19:14:22Z" name="Default suite" finished-at="2023-01-23T19:15:07Z" duration-ms="44266">
     <groups>
     </groups>
-    <test started-at="2023-01-19T21:16:48Z" name="Default test" finished-at="2023-01-19T21:17:18Z" duration-ms="30433">
+    <test started-at="2023-01-23T19:14:22Z" name="Default test" finished-at="2023-01-23T19:15:07Z" duration-ms="44266">
       <class name="Pruebas.AppTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Pruebas.AppTest@512baff6]" started-at="2023-01-19T21:16:48Z" name="setup" finished-at="2023-01-19T21:16:56Z" duration-ms="8251" status="PASS">
+        <test-method is-config="true" signature="startReport()[pri:0, instance:Pruebas.AppTest@60856961]" started-at="2023-01-23T19:14:22Z" name="startReport" finished-at="2023-01-23T19:14:23Z" duration-ms="583" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:Pruebas.AppTest@60856961]" started-at="2023-01-23T19:14:23Z" name="setup" finished-at="2023-01-23T19:14:42Z" duration-ms="19494" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Pruebas.AppTest.clickCuba()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="clickCuba()[pri:0, instance:Pruebas.AppTest@512baff6]" started-at="2023-01-19T21:16:56Z" name="clickCuba" finished-at="2023-01-19T21:16:59Z" duration-ms="3099" status="FAIL">
+        <test-method signature="clickCuba()[pri:0, instance:Pruebas.AppTest@60856961]" started-at="2023-01-23T19:14:42Z" name="clickCuba" finished-at="2023-01-23T19:14:46Z" duration-ms="3101" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#incorrecto"}
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"*[name='Cosa']"}
   (Session info: headless chrome=109.0.5414.75)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.7.2', revision: '4d4020c3b7'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [86449e0300751cd8b058bff2f4963415, findElement {using=id, value=incorrecto}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\adelpino.CHF\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:63850}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63850/devtoo..., se:cdpVersion: 109.0.5414.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 86449e0300751cd8b058bff2f4963415]]>
+Command: [d0bb67617a1a21fd12790bde997d55f3, findElement {using=name, value=Cosa}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\adelpino.CHF\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:63603}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63603/devtoo..., se:cdpVersion: 109.0.5414.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d0bb67617a1a21fd12790bde997d55f3]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#incorrecto"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='Cosa']"}
   (Session info: headless chrome=109.0.5414.75)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.7.2', revision: '4d4020c3b7'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [86449e0300751cd8b058bff2f4963415, findElement {using=id, value=incorrecto}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\adelpino.CHF\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:63850}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63850/devtoo..., se:cdpVersion: 109.0.5414.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 86449e0300751cd8b058bff2f4963415
+Command: [d0bb67617a1a21fd12790bde997d55f3, findElement {using=name, value=Cosa}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\adelpino.CHF\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:63603}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63603/devtoo..., se:cdpVersion: 109.0.5414.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d0bb67617a1a21fd12790bde997d55f3
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -50,7 +61,7 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
-at Pruebas.AppTest.clickCuba(AppTest.java:62)
+at Pruebas.AppTest.clickCuba(AppTest.java:78)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -82,55 +93,73 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickCuba -->
-        <test-method is-config="true" signature="After(org.testng.ITestResult)[pri:0, instance:Pruebas.AppTest@512baff6]" started-at="2023-01-19T21:16:59Z" name="After" finished-at="2023-01-19T21:16:59Z" duration-ms="119" status="PASS">
+        <test-method is-config="true" signature="After(org.testng.ITestResult)[pri:0, instance:Pruebas.AppTest@60856961]" started-at="2023-01-23T19:14:46Z" name="After" finished-at="2023-01-23T19:14:46Z" duration-ms="230" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=clickCuba status=FAILURE method=AppTest.clickCuba()[pri:0, instance:Pruebas.AppTest@512baff6] output={null}]]]>
+                <![CDATA[[TestResult name=clickCuba status=FAILURE method=AppTest.clickCuba()[pri:0, instance:Pruebas.AppTest@60856961] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- After -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:Pruebas.AppTest@512baff6]" started-at="2023-01-19T21:16:59Z" name="setup" finished-at="2023-01-19T21:17:09Z" duration-ms="9205" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:Pruebas.AppTest@60856961]" started-at="2023-01-23T19:14:46Z" name="setup" finished-at="2023-01-23T19:14:55Z" duration-ms="9719" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Pruebas.AppTest.selectHaiti()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="selectHaiti()[pri:0, instance:Pruebas.AppTest@512baff6]" started-at="2023-01-19T21:17:09Z" name="selectHaiti" finished-at="2023-01-19T21:17:10Z" duration-ms="928" status="PASS">
+        <test-method signature="selectHaiti()[pri:0, instance:Pruebas.AppTest@60856961]" started-at="2023-01-23T19:14:55Z" name="selectHaiti" finished-at="2023-01-23T19:14:56Z" duration-ms="846" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectHaiti -->
-        <test-method is-config="true" signature="After(org.testng.ITestResult)[pri:0, instance:Pruebas.AppTest@512baff6]" started-at="2023-01-19T21:17:10Z" name="After" finished-at="2023-01-19T21:17:10Z" duration-ms="170" status="PASS">
+        <test-method is-config="true" signature="After(org.testng.ITestResult)[pri:0, instance:Pruebas.AppTest@60856961]" started-at="2023-01-23T19:14:56Z" name="After" finished-at="2023-01-23T19:14:56Z" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=selectHaiti status=SUCCESS method=AppTest.selectHaiti()[pri:0, instance:Pruebas.AppTest@512baff6] output={null}]]]>
+                <![CDATA[[TestResult name=selectHaiti status=SUCCESS method=AppTest.selectHaiti()[pri:0, instance:Pruebas.AppTest@60856961] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- After -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:Pruebas.AppTest@512baff6]" started-at="2023-01-19T21:17:10Z" name="setup" finished-at="2023-01-19T21:17:18Z" duration-ms="8127" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:Pruebas.AppTest@60856961]" started-at="2023-01-23T19:14:56Z" name="setup" finished-at="2023-01-23T19:15:05Z" duration-ms="8912" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Pruebas.AppTest.verifRadioButton()]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifRadioButton()[pri:0, instance:Pruebas.AppTest@512baff6]" started-at="2023-01-19T21:17:18Z" name="verifRadioButton" finished-at="2023-01-19T21:17:18Z" duration-ms="332" status="PASS">
+        <test-method signature="verifRadioButton()[pri:0, instance:Pruebas.AppTest@60856961]" started-at="2023-01-23T19:15:05Z" name="verifRadioButton" finished-at="2023-01-23T19:15:06Z" duration-ms="374" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifRadioButton -->
-        <test-method is-config="true" signature="After(org.testng.ITestResult)[pri:0, instance:Pruebas.AppTest@512baff6]" started-at="2023-01-19T21:17:18Z" name="After" finished-at="2023-01-19T21:17:18Z" duration-ms="179" status="PASS">
+        <test-method is-config="true" signature="After(org.testng.ITestResult)[pri:0, instance:Pruebas.AppTest@60856961]" started-at="2023-01-23T19:15:06Z" name="After" finished-at="2023-01-23T19:15:06Z" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifRadioButton status=SUCCESS method=AppTest.verifRadioButton()[pri:0, instance:Pruebas.AppTest@512baff6] output={null}]]]>
+                <![CDATA[[TestResult name=verifRadioButton status=SUCCESS method=AppTest.verifRadioButton()[pri:0, instance:Pruebas.AppTest@60856961] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- After -->
+        <test-method is-config="true" signature="tearDrown()[pri:0, instance:Pruebas.AppTest@60856961]" started-at="2023-01-23T19:15:06Z" name="tearDrown" finished-at="2023-01-23T19:15:07Z" duration-ms="966" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDrown -->
       </class> <!-- Pruebas.AppTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

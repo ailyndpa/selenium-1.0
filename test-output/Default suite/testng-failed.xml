@@ -5,7 +5,9 @@
     <classes>
       <class name="Pruebas.AppTest">
         <methods>
+          <include name="tearDrown"/>
           <include name="setup"/>
+          <include name="startReport"/>
           <include name="clickCuba"/>
           <include name="After"/>
         </methods>
