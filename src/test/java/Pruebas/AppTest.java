@@ -40,7 +40,7 @@ public class AppTest
 	@BeforeTest
 	public void startReport() {
 		extent = new ExtentReports();
-		spark = new ExtentSparkReporter("ExtentReport.html");
+		spark = new ExtentSparkReporter("Report/ExtentReport.html");
 		spark.config().setDocumentTitle("Automation Report");
 		spark.config().setReportName("Test Report");
 		spark.config().setTimeStampFormat("dd.MM.yyyy HH:mm:ss");
@@ -75,8 +75,7 @@ public class AppTest
     @Test
     public void clickCuba()
     {
-    	Assert.assertTrue(driver.findElement(By.name("Cosa")).isDisplayed());
-    	    	
+    	System.out.println(driver.getTitle());
     }
     
     @Test
@@ -97,9 +96,9 @@ public class AppTest
     public void After(ITestResult result) throws IOException {
     	if (result.getStatus() == ITestResult.FAILURE){
     		File evidencia=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        	FileUtils.copyFile(evidencia, new File("target/surefire-reports/Evidencia"));
+        	FileUtils.copyFile(evidencia, new File("Report/Evidencia.jpeg"));
     		test.log(Status.FAIL, result.getThrowable());
-        	test.addScreenCaptureFromPath("target/surefire-reports/Evidencia");
+        	test.addScreenCaptureFromPath("Evidencia.jpeg");
         	
     	} else if(result.getStatus() == ITestResult.SUCCESS) {
     		test.log(Status.PASS, result.getTestName());

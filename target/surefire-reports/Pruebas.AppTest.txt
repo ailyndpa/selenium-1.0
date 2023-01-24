@@ -1,17 +1,17 @@
 -------------------------------------------------------------------------------
 Test set: Pruebas.AppTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 33.519 s <<< FAILURE! - in Pruebas.AppTest
-clickCuba(Pruebas.AppTest)  Time elapsed: 3.109 s  <<< FAILURE!
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 46.889 s <<< FAILURE! - in Pruebas.AppTest
+clickCuba(Pruebas.AppTest)  Time elapsed: 3.075 s  <<< FAILURE!
 org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"css selector","selector":"#incorrecto"}
+no such element: Unable to locate element: {"method":"css selector","selector":"*[name='Cosa']"}
   (Session info: headless chrome=109.0.5414.75)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.7.2', revision: '4d4020c3b7'
 System info: os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_351'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f7a497b2caffe4ab5106ccf68e942ca4, findElement {using=id, value=incorrecto}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\adelpino.CHF\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:52158}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52158/devtoo..., se:cdpVersion: 109.0.5414.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: f7a497b2caffe4ab5106ccf68e942ca4
-	at Pruebas.AppTest.clickCuba(AppTest.java:62)
+Command: [99825d4d4d89e52da629c0fd956643ee, findElement {using=name, value=Cosa}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\adelpino.CHF\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:49989}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49989/devtoo..., se:cdpVersion: 109.0.5414.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 99825d4d4d89e52da629c0fd956643ee
+	at Pruebas.AppTest.clickCuba(AppTest.java:78)
 
